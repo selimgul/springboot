@@ -1,0 +1,51 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ValidationApplication",
+            "request": "launch",
+            "mainClass": "com.example.validation.ValidationApplication",
+            "projectName": "validation"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigurationApplication<config>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gul.selim.ConfigurationApplication",
+            "projectName": "config",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ResttemplateApplication<resttemplate>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gul.selim.ResttemplateApplication",
+            "projectName": "resttemplate",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebBundleApplication<web-bundle>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "gul.selim.webbundle.WebBundleApplication",
+            "projectName": "web-bundle",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MvcApplication<mvc>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gul.selim.MvcApplication",
+            "projectName": "mvc",
+            "args": ""
+        }
+    ]
+}

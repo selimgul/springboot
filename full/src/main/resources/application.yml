@@ -1,0 +1,64 @@
+# TOMCAT
+server:
+  port: 8081
+
+#LOGGING
+logging:
+  file:
+    path: c:\\Temp
+    name: ${logging.file.path}\\audit.log
+  level:
+    root: INFO
+    springboot.controller: ERROR
+
+#PATTERNS
+pattern:
+  filter: /product/*
+  interceptor: /product/*
+  cors: /**
+
+#HTTP HEADERS
+custom:
+  header:
+    name: x-custom
+    value: selim.gul
+
+#SERVICE ENDPOINTS
+productservice:
+  url: http://localhost:${server.port}/product/
+
+#ACTUATOR
+management:
+  security:
+    enabled: false
+
+#DATASOURCE
+spring:
+  datasource:
+    db1:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      username: selimgul
+      password: selimgul
+    db2:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      username: selimgul
+      password: selimgul
+  redis:
+    hostName: localhost
+    password: password
+    port: 6379
+    timeout: 0
+
+#EUREKA 
+#productservice:
+#  url: http://product-service-by-selimgul/product/
+#
+#spring:
+#  application:
+#    name: product-service-by-selimgul
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8888/eureka/
+#    preferIpAddress: truey

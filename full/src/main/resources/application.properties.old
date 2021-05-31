@@ -1,0 +1,28 @@
+# TOMCAT
+server.port=8081
+
+#LOGGING
+logging.file.path = c:\\Temp
+logging.file.name=${logging.file.path}\\audit.log 
+logging.level.root = INFO
+
+#PATTERNS
+pattern.filter=/product/*
+pattern.interceptor=/product/*
+pattern.cors=/**
+
+#HTTP HEADERS
+custom.header.name=x-custom
+custom.header.value=selim.gul
+
+#SERVICE ENDPOINTS
+productservice.url=http://localhost:${server.port}/product/
+
+#ACTUATOR
+management.security.enabled=false
+
+#EUREKA 
+#productservice.url=http://product-service-by-selimgul/product/
+#spring.application.name=product-service-by-selimgul
+#eureka.client.serviceUrl.defaultZone=http://localhost:8888/eureka/
+#eureka.client.preferIpAddress=true
