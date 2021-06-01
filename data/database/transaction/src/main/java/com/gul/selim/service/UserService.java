@@ -1,16 +1,14 @@
 package com.gul.selim.service;
 
+import java.util.List;
+import java.util.Random;
+
 import com.gul.selim.model.User;
 import com.gul.selim.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.PostConstruct;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class UserService {
