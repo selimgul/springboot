@@ -2,6 +2,8 @@ package com.example.openfeign.client;
 
 import java.util.List;
 
+import com.example.openfeign.config.FeignConfiguration;
+import com.example.openfeign.config.JSONPlaceHolderFallback;
 import com.example.openfeign.model.Post;
 
 import org.springframework.cloud.openfeign.FeignClient;
@@ -9,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(value = "jplaceholder", url = "https://jsonplaceholder.typicode.com/")
+@FeignClient(value = "jplaceholder", url = "https://jsonplaceholder.typicode.com/", 
+             configuration = FeignConfiguration.class,
+             fallback = JSONPlaceHolderFallback.class)
 public interface JSONPlaceHolderClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/posts")

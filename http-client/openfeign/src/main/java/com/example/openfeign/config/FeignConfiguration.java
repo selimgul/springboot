@@ -9,11 +9,14 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 
 import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.entity.ContentType;
 import org.apache.http.ssl.SSLContexts;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import feign.Client;
+import feign.RequestInterceptor;
+import feign.codec.ErrorDecoder;
 
 @Configuration
 public class FeignConfiguration {
@@ -41,4 +44,17 @@ public class FeignConfiguration {
         return null;
     }
     
+    @Bean
+    public RequestInterceptor requestInterceptor() {
+        return requestTemplate -> {
+            requestTemplate.header("user",     "selim");
+            requestTemplate.header("password", "gul");
+            requestTemplate.header("Accept", ContentType.APPLICATION_JSON.getMimeType());
+        };
+    }   
+
+    @Bean
+    public ErrorDecoder errorDecoder() {
+        return new CustomErrorDecoder();
+    }
 }

@@ -1,0 +1,23 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+feign:
+  client:
+    config:
+      jplaceholder:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: headers
+  hystrix:
+    enabled: true
+
+
+logging:
+  level:
+    com:
+      example:
+        openfeign:
+          client:
+            JSONPlaceHolderClient: DEBUG    

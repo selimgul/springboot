@@ -21,8 +21,7 @@ public class JSONPlaceHolderServiceImpl implements JSONPlaceHolderService {
     }
 
     @Override
-    public Post getPostById(Long id) {
-        System.out.println("post id: " + id );
+    public Post getPostById(Long id) {        
         return jsonPlaceHolderClient.getPostById(id);
     }
 }
