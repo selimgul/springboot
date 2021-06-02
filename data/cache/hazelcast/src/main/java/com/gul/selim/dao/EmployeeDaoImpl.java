@@ -26,13 +26,13 @@ public class EmployeeDaoImpl extends JdbcDaoSupport implements EmployeeDao {
 
 	@Override
 	public void insertEmployee(Employee emp) {
-		String sql = "INSERT INTO employee " + "(empId, empName) VALUES (?, ?)";
+		String sql = "INSERT INTO EMPLOYEE " + "(empId, empName) VALUES (?, ?)";
 		getJdbcTemplate().update(sql, new Object[] { emp.getEmpId(), emp.getEmpName() });
 	}
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		String sql = "SELECT * FROM employee";
+		String sql = "SELECT * FROM EMPLOYEE";
 		List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
 
 		List<Employee> result = new ArrayList<Employee>();

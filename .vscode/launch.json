@@ -55,7 +55,17 @@
             "console": "internalConsole",
             "mainClass": "com.example.openfeign.OpenfeignApplication",
             "projectName": "openfeign",
-            "args": ""           
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HazelcastApplication<hazelcast>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gul.selim.HazelcastApplication",
+            "projectName": "hazelcast",
+            "args": ""
         }
     ]
 }

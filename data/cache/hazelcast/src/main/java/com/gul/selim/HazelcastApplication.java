@@ -19,6 +19,7 @@ public class HazelcastApplication {
 		
 		EmployeeService employeeService = context.getBean(EmployeeService.class);
 				
+		System.out.println("=============================== Started =============================== ");
 		Employee emp= new Employee();
 		emp.setEmpId("emp");
 		emp.setEmpName("emp");
