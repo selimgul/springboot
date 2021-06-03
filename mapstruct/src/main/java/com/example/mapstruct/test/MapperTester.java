@@ -24,8 +24,8 @@ public class MapperTester {
         log.info("======================= Running Test =======================");
 
     	UserEntity userDAO = UserEntity.builder().name("selim").surname("gul").age(39).build();
-			
-		User user = userMapper.toUser(userDAO);
+
+        User user = userMapper.toUser(userDAO);
         log.info(user.toString());
 
         UserEntity entity = userMapper.toUserEntity(user);
