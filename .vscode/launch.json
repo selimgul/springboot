@@ -76,6 +76,16 @@
             "mainClass": "com.gul.selim.JwtApplication",
             "projectName": "jwt",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MapstructApplication<mapstruct>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.mapstruct.MapstructApplication",
+            "projectName": "mapstruct",
+            "args": ""
         }
     ]
 }
