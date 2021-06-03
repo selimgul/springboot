@@ -66,6 +66,16 @@
             "mainClass": "com.gul.selim.HazelcastApplication",
             "projectName": "hazelcast",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-JwtApplication<jwt>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.gul.selim.JwtApplication",
+            "projectName": "jwt",
+            "args": ""
         }
     ]
 }
