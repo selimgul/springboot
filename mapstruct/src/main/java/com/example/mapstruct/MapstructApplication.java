@@ -1,11 +1,5 @@
 package com.example.mapstruct;
 
-import com.example.mapstruct.mapper.UserMapper;
-import com.example.mapstruct.model.UserEntity;
-import com.example.mapstruct.model.User;
-
-import org.mapstruct.factory.Mappers;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

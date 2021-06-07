@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	@Cacheable()
+	@Cacheable
 	public List<Employee> getAllEmployees() {
 		System.out.println("Inside the service layer");
 		return employeeDao.getAllEmployees();
