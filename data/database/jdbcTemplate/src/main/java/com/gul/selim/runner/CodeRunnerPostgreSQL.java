@@ -2,11 +2,10 @@ package com.gul.selim.runner;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.gul.selim.model.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -14,64 +13,64 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
-@Component
-public class CodeRunnerPostgreSQL implements CommandLineRunner {
 
-	@Autowired
-	@Qualifier("postgresql")
-	private NamedParameterJdbcTemplate jdbcTemplate;
+// @Component
+// public class CodeRunnerPostgreSQL implements CommandLineRunner {
 
-	@Override
-	public void run(String... args) throws Exception {
-		getSingleUser();
-		getAllUsers();
-	}
-	private void getSingleUser() {
+// 	@Autowired
+// 	@Qualifier("postgresql")
+// 	private NamedParameterJdbcTemplate jdbcTemplate;
 
-		String sql = "select * from Users where id=:id";
+// 	@Override
+// 	public void run(String... args) throws Exception {
+// 		getSingleUser();
+// 		getAllUsers();
+// 	}
+// 	private void getSingleUser() {
 
-		Integer id = 1;
-		MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-		mapSqlParameterSource.addValue("id", id);
+// 		String sql = "select * from Users where id=:id";
 
-		User user = jdbcTemplate.queryForObject(sql,mapSqlParameterSource, new RowMapper<User>() {
+// 		Integer id = 1;
+// 		MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+// 		mapSqlParameterSource.addValue("id", id);
 
-			@Override
-			public User mapRow(ResultSet rs, int index) throws SQLException {
+// 		User user = jdbcTemplate.queryForObject(sql,mapSqlParameterSource, new RowMapper<User>() {
 
-				User user = new User();
-				user.setId(rs.getInt("id"));
-				user.setName(rs.getString("name"));
+// 			@Override
+// 			public User mapRow(ResultSet rs, int index) throws SQLException {
 
-				return user;
-			}
+// 				User user = new User();
+// 				user.setId(rs.getInt("id"));
+// 				user.setName(rs.getString("name"));
 
-		});
+// 				return user;
+// 			}
 
-		System.out.println(user.toString());
-	}
+// 		});
 
-	private void getAllUsers() {
+// 		System.out.println(user.toString());
+// 	}
 
-		String sql = "select * from Users";
+// 	private void getAllUsers() {
 
-		List<User> users = jdbcTemplate.query(sql, new RowMapper<User>() {
+// 		String sql = "select * from Users";
 
-			@Override
-			public User mapRow(ResultSet rs, int index) throws SQLException {
+// 		List<User> users = jdbcTemplate.query(sql, new RowMapper<User>() {
 
-				User user = new User();
-				user.setId(rs.getInt("id"));
-				user.setName(rs.getString("name"));
+// 			@Override
+// 			public User mapRow(ResultSet rs, int index) throws SQLException {
 
-				return user;
-			}
+// 				User user = new User();
+// 				user.setId(rs.getInt("id"));
+// 				user.setName(rs.getString("name"));
 
-		});
+// 				return user;
+// 			}
 
-		users.forEach(user -> System.out.println(user.toString()));
-	}
+// 		});
 
-}
+// 		users.forEach(user -> System.out.println(user.toString()));
+// 	}
+
+// }

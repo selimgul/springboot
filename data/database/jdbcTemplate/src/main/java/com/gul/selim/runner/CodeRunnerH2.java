@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.gul.selim.model.User;
+import com.gul.selim.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -19,10 +21,14 @@ public class CodeRunnerH2 implements CommandLineRunner {
 	@Qualifier("h2")
 	private JdbcTemplate jdbcTemplate;
 
+	@Autowired
+	private UserRepository userRepository;
+
 	@Override
 	public void run(String... args) throws Exception {
 		getSingleUser();
 		getAllUsers();
+		createUser();
 	}
 
 	private void getSingleUser() {
@@ -67,5 +73,14 @@ public class CodeRunnerH2 implements CommandLineRunner {
 		});
 
 		users.forEach(user -> System.out.println(user.toString()));
+	}
+
+	private void createUser(){
+
+		User user = new User();
+		user.setId(10);
+		user.setName("foo");
+
+		userRepository.createUser(user);
 	}
 }
