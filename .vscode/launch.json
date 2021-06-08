@@ -86,6 +86,16 @@
             "mainClass": "com.example.mapstruct.MapstructApplication",
             "projectName": "mapstruct",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RabbitmqConsumerApplication<rabbitmq-consumer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.rabbitmqconsumer.RabbitmqConsumerApplication",
+            "projectName": "rabbitmq-consumer",
+            "args": ""
         }
     ]
 }
