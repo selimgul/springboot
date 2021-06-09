@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>gul.selim</groupId>
-    <artifactId>config-client-app</artifactId>
+    <artifactId>config-client-pivotal</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
