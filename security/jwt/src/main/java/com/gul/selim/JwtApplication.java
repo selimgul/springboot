@@ -32,7 +32,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //       WebSecurityConfig::configure içerisinde set ettiğimiz exception handler devreye girecektir ya da token almak için user/password ile yapılan 
 //       bir istek söz konusudur. Bu durumda sadece AuthenticationManager nesnesinin authencate metodu bu user ve password ile çağrılır.
 //       WebSecurityConfig::configure içerisinde yaptığımız tanım gereği AuthenticationManager authenticate işlemini nasıl yapacağını biliyordur.
-// 		 Eğer bu noktada bir hata alınmamışsa JWT üretilip isteğe dönüş yapılır. 
+//       Eğer bu noktada bir hata alınmamışsa JWT üretilip isteğe dönüş yapılır. 
 
 @SpringBootApplication
 public class JwtApplication {
