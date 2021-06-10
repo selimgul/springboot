@@ -19,7 +19,6 @@ public class UserService {
 
     @Cacheable(value = "userCache", key="#id", cacheManager = "cacheManagerForTenSec")    
     public User getUser(Long id){
-
         System.out.println("User is returning from actual data source. #" + id);
         return User.builder().id(id).name("foo").build();
     }
