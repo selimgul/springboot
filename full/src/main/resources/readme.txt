@@ -48,7 +48,6 @@ Interceptor kontrol controller'a bırakılmadan önce ve controller'dan client'a
 Spring context'i içinde çalışır.
 Filter ile benzer bir kullanımı vardır. Önce Filter çalışır, controller'a geçmeden önce de Interceptor çalışır.
 
-
 Annotations
 -----------
 [@Scope("prototype")]
@@ -93,5 +92,3 @@ Annotations
   * Swagger
 - Monitoring
   * Actuator
-
-
